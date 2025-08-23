@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me | Mohamed Sameer</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-  
-  <h1>About Me</h1>
-  <p>This is my about page.</p>
+
+  <!-- Navbar -->
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <div class="logo">MS</div><span>Mohamed Sameer</span>
+      </a>
+      <button class="toggle" id="navToggle">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Content -->
+  <main class="container hero">
+    <h1>About Me</h1>
+    <p>
+      Hello! I’m <strong>Mohamed Sameer</strong>, a Computer Science Engineer and passionate
+      Python developer. I have experience with <strong>Python, Django, Flask, SQL</strong>, and
+      <strong>SAP EDI/IDOC integration</strong>. I enjoy building clean web applications and
+      solving real-world problems.
+    </p>
+    <p>
+      Apart from coding, I have also worked in corporate environments like <strong>HCLTech</strong>
+      and <strong>Wingsser Solutions</strong>, where I handled both technical and business-side
+      projects.
+    </p>
+    <p>
+      <a class="btn primary" href="Mohamed_Sameer_Resume.pdf" target="_blank">Download Resume</a>
+    </p>
+  </main>
+
+  <footer><div class="container">© <span id="y"></span> Mohamed Sameer</div></footer>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('navToggle').onclick=()=>document.getElementById('navLinks').classList.toggle('open')
+  </script>
 </body>
 </html>
