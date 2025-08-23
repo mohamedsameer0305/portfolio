@@ -1,70 +1,109 @@
 <!DOCTYPE html>
-<h2>Skills</h2>
-<ul>
-<li>Languages: Python, C, C++</li>
-<li>Web: HTML, CSS, Django, Flask, SQL</li>
-<li>Tools: Git, Power Platform, Figma, Photoshop</li>
-</ul>
-</section>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohamed Sameer | Portfolio</title>
+  <meta name="description" content="Portfolio of Mohamed Sameer — Python Developer • SAP EDI/IDOC • Web Development."/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
 
+  <!-- ===== Header / Navbar ===== -->
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="index.html" aria-label="Go to home">
+        <div class="logo">MS</div>
+        <span>Mohamed Sameer</span>
+      </a>
 
-<section id="projects">
-<h2>Projects</h2>
-<div class="project">
-<h3>Weather Prediction (ML)</h3>
-<p>Built a weather prediction model using Python and Machine Learning algorithms.</p>
-</div>
-<div class="project">
-<h3>Contact Management App</h3>
-<p>Developed a Django-based app with CRUD features and SQL backend.</p>
-</div>
-<div class="project">
-<h3>Business Strategy Framework</h3>
-<p>Created a framework for business analysis and strategy planning using Python and SQL.</p>
-</div>
-</section>
+      <button class="toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
 
+      <nav class="nav-links" id="navLinks">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn" href="Mohamed_Sameer_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+      </nav>
+    </div>
+  </header>
 
-<section id="experience">
-<h2>Experience</h2>
-<div class="job">
-<h3>HCLTech (2023 – Present)</h3>
-<p><strong>Customer Representative (Project Role: Python Developer)</strong></p>
-<ul>
-<li>Developed Python scripts for automation in Apria/Western Digital projects.</li>
-<li>Worked with SQL & Python for data validation and reporting.</li>
-<li>Contributed to internal web-based tools using Django/Flask.</li>
-</ul>
-</div>
-<div class="job">
-<h3>Wingsser Solutions (2022 – 2023)</h3>
-<p><strong>Programmer Analyst (Python/Full Stack Developer)</strong></p>
-<ul>
-<li>Built web applications with Django and Flask frameworks.</li>
-<li>Integrated REST APIs and managed MySQL databases.</li>
-<li>Collaborated on scalable solutions for client projects.</li>
-</ul>
-</div>
-</section>
+  <!-- ===== Hero ===== -->
+  <main class="container hero">
+    <div class="grid">
+      <!-- Left -->
+      <section>
+        <div class="kicker">Hello! I'm Sameer 👋</div>
+        <h1>Python Developer & SAP EDI/IDOC (Integration)</h1>
+        <p class="subtitle">
+          I build web apps using <strong>Python, Django/Flask</strong>, and integrate systems with
+          <strong>SAP EDI/IDOC</strong>. Comfortable with <strong>MySQL/SQL</strong>, HTML/CSS, and modern tooling.
+          Open to roles in <strong>Chennai / Hyderabad / Bangalore</strong>.
+        </p>
 
+        <div class="cta">
+          <a class="btn primary" href="projects.html">View Projects</a>
+          <a class="btn" href="contact.html">Contact Me</a>
+          <a class="btn" href="about.html">About</a>
+        </div>
 
-<section id="education">
-<h2>Education</h2>
-<p>B.E. Computer Science and Engineering</p>
-<p>MBA (System Management) – Ongoing</p>
-</section>
+        <!-- Quick highlights -->
+        <div class="features">
+          <div class="card feature">
+            <div class="badge">Py</div>
+            <div>
+              <strong>Python, SQL</strong><br/>
+              Data structures, problem-solving, MySQL queries, APIs.
+            </div>
+          </div>
 
+          <div class="card feature">
+            <div class="badge">Web</div>
+            <div>
+              <strong>Django / Flask</strong><br/>
+              REST APIs, auth, CRUD, clean MVC structure.
+            </div>
+          </div>
 
-<section id="contact">
-<h2>Contact</h2>
-<p>Email: your-email@example.com</p>
-<p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-<p>GitHub: <a href="#">github.com/yourusername</a></p>
-</section>
+          <div class="card feature">
+            <div class="badge">SAP</div>
+            <div>
+              <strong>EDI / IDOC</strong><br/>
+              Orders, IDoc flows, error handling, partner profiles.
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Right (placeholder image / can replace later) -->
+      <aside class="card" aria-label="Profile preview">
+        <img src="images/profile-placeholder.png"
+             alt="Profile illustration"
+             style="width:100%;border-radius:12px;display:block;aspect-ratio:1/1;object-fit:cover;background:#0b1224;border:1px solid rgba(148,163,184,.12)"/>
+        <div style="margin-top:12px;color:#94a3b8;font-size:14px">
+          Replace this image with <code>images/your-photo.jpg</code>
+        </div>
+      </aside>
+    </div>
+  </main>
 
-<footer>
-<p>© 2025 Mohamed Sameer | Portfolio</p>
-</footer>
+  <footer>
+    <div class="container">
+      © <span id="y"></span> Mohamed Sameer • Built with HTML & CSS
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
-</html> 
+</html>
