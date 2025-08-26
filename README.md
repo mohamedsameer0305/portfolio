@@ -9,3 +9,7 @@ Python Developer & Full Stack Developer skilled in building backend systems with
 ## 📫 Contact Me
 - Email: mohamedsameer1720@gmail.com
 - LinkedIn: linkedin.com/in/mohamedsameer02/
+
+- <p align="center">
+  <img src="me.png.jpg" alt="Mohamed Sameer" width="200" style="border-radius:50%"/>
+</p>
