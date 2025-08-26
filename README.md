@@ -1,6 +1,6 @@
  Hi, I'm Mohammed Sameer 
 
-I'm a passionate web developer building dynamic websites with Django, HTML, CSS, and Python.
+Python Developer & Full Stack Developer skilled in building backend systems with Python/Django and crafting responsive frontends with HTML, CSS, and modern web technologies.
 
 ## 🚀 Projects
 - [Portfolio Website](https://github.com/mohamedsameer0305/portfolio)
