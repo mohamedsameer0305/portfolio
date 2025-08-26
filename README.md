@@ -11,5 +11,5 @@ Python Developer & Full Stack Developer skilled in building backend systems with
 - LinkedIn: linkedin.com/in/mohamedsameer02/
 
 - <p align="center">
-  <img src="[me.png.jpg](https://github.com/mohamedsameer0305/portfolio/blob/main/me.png.jpeg)" alt="Mohamed Sameer" width="200" style="border-radius:50%"/>
+  <img src="me.png.jpeg" alt="Mohamed Sameer" width="200" style="border-radius:50%"/>
 </p>
