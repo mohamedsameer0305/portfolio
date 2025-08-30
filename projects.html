@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Mohamed Sameer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <div class="logo">MS</div><span>Mohamed Sameer</span>
+      </a>
+      <button class="toggle" id="navToggle">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Projects Content -->
+  <main class="container hero">
+  <h1>My Projects</h1>
+  <div class="features">
+
+    <div class="card feature">
+      <div class="badge">Python/Django</div>
+      <div>
+        <strong>Admin Dashboard</strong><br/>
+        Developed at <b>Wingsser Solutions</b> – a responsive dashboard to manage users, roles, and reports efficiently.
+    </div>
+  <!-- Button -->
+  <button onclick="openModal('modal1')">View Details</button>
+</div>
+
+<!-- Modal for Project 1 -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h2>Admin Dashboard (Wingsser Solutions)</h2>
+    <p><b>What I Did:</b> Built an interactive admin panel for managing user accounts, permissions, and real-time reports.</p>
+    <p><b>Tech Used:</b> HTML, CSS, JavaScript, Django, MySQL.</p>
+    <p><b>My Contribution:</b> Designed role-based authentication, integrated data visualization charts, and improved user experience with a clean UI.</p>
+  </div>
+</div>
+
+
+<!-- Project 2: Components Manufacturing System (HCLTech) -->
+<div class="card feature">
+  <div class="badge">Python</div>
+  <div>
+    <strong>Components Manufacturing System</strong><br/>
+    Built at <b>HCLTech</b> – an automated system to handle production workflow, stock, and customer orders.
+  </div>
+  <!-- Button -->
+  <button onclick="openModal('modal2')">View Details</button>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h2>Components Manufacturing System (HCLTech)</h2>
+    <p><b>What I Did:</b> Developed an automated system to manage production workflow, track stock availability, and process customer orders efficiently.</p>
+    <p><b>Tech Used:</b> Python, Flask/Django, SQL, Excel Automation, API Integration.</p>
+    <p><b>My Contribution:</b> Implemented production tracking modules, optimized stock validation logic, and automated order reports, reducing manual errors and saving time.</p>
+  </div>
+</div>
+  </div>
+</main>
+
+  <footer><div class="container">© <span id="y"></span> Mohamed Sameer</div></footer>
+  <script>
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+</script>
+
+</body>
+</html>

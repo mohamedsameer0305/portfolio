@@ -1,0 +1,257 @@
+/* === Root Variables === */
+:root {
+  --bg: #0f172a;          /* slate-900 */
+  --card: #111827;        /* gray-900 */
+  --text: #e5e7eb;        /* gray-200 */
+  --muted: #94a3b8;       /* slate-400 */
+  --accent: #00adb5;      /* teal/cyan */
+  --accent-2: #38bdf8;    /* sky-400 */
+}
+
+/* === Reset & Base === */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+  background-color: #0b1224;
+  background: radial-gradient(1200px 600px at 20% 10%, #0b1224 0%, var(--bg) 60%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* === Layout Helpers === */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === Header / Navbar === */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #0a0a0a;
+  font-weight: 800;
+}
+
+.brand span {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* === Navigation Links === */
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-links a.active {
+  color: #fff;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 2px;
+}
+
+/* === Buttons === */
+.btn {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.btn:hover {
+  border-color: rgba(148, 163, 184, 0.45);
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: none;
+  color: #0a0a0a;
+}
+
+.btn.primary:hover {
+  filter: brightness(1.05);
+}
+
+/* === Mobile Toggle === */
+.toggle {
+  display: none;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: transparent;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+/* === Hero Section === */
+.hero {
+  padding: 72px 0 56px;
+}
+
+.grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kicker {
+  color: var(--accent-2);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+h1 {
+  margin: 10px 0 8px;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.15;
+}
+
+.subtitle {
+  color: var(--muted);
+  max-width: 680px;
+}
+
+.cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* === Feature Cards === */
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.features {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.feature {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), #1ee3f0);
+  color: #0a0a0a;
+  font-weight: 900;
+}
+
+/* === Footer === */
+footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  padding: 24px 0;
+  margin-top: 40px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* === Mobile Nav Behavior === */
+@media (max-width: 720px) {
+  .toggle {
+    display: block;
+  }
+
+  .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  }
+
+  .nav-links.open {
+    max-height: 300px;
+    padding: 16px 20px;
+  }
+}

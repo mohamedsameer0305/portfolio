@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Mohamed Sameer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <div class="logo">MS</div><span>Mohamed Sameer</span>
+      </a>
+      <button class="toggle" id="navToggle">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Content -->
+  <main class="container hero">
+    <h1>Contact Me</h1>
+    <p>You can reach me through the form below or connect via my socials.</p>
+
+    <form class="card" style="max-width:500px">
+      <label>Name</label><br/>
+      <input type="text" style="width:100%;padding:8px;margin:6px 0"/><br/>
+      <label>Email</label><br/>
+      <input type="email" style="width:100%;padding:8px;margin:6px 0"/><br/>
+      <label>Message</label><br/>
+      <textarea style="width:100%;padding:8px;margin:6px 0"></textarea><br/>
+      <button class="btn primary" type="submit">Send</button>
+    </form>
+
+    <p style="margin-top:20px">
+      📧 <a href="mailto:mohamedsameer0305@gmail.com">mohamedsameer0305@gmail.com</a><br/>
+      🔗 <a href="https://linkedin.com/in/mohamedsameer0305" target="_blank">LinkedIn</a><br/>
+      💻 <a href="https://github.com/mohamedsameer0305" target="_blank">GitHub</a>
+    </p>
+  </main>
+
+  <footer><div class="container">© <span id="y"></span> Mohamed Sameer</div></footer>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('navToggle').onclick=()=>document.getElementById('navLinks').classList.toggle('open')
+  </script>
+</body>
+</html>

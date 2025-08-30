@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Header / Navbar ===== -->
+  <header>
+    <div class="container navbar">
+    <a class="brand" href="index.html" aria-label="Go to home">
+      <img src="images/profile.jpeg" alt="Mohamed Sameer Profile Photo" />
+      <div class="logo">MS</div>
+      <span>Mohamed Sameer</span>
+    </a>
+
+
+      <button class="toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn" href="Mohamed_Sameer_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <main class="container hero">
+    <div class="grid">
+      <!-- Left -->
+      <section>
+        <div class="kicker">Hello! I'm Sameer 👋</div>
+        <h1>Python & Full Stack Developer </h1>
+        <p class="subtitle">
+          Skilled in building using scalable backend systems with <strong>Python/Django/Flask</strong> and responsive frontends with HTML, CSS. Comfortable with <strong>MySQL/SQL</strong>, and modern tooling.
+          Open to roles in <strong>Chennai / Hyderabad / Bangalore</strong>.
+        </p>
+        
+        <div class="cta">
+          <a class="btn primary" href="projects.html">View Projects</a>
+          <a class="btn" href="contact.html">Contact Me</a>
+          <a class="btn" href="about.html">About</a>
+        </div>
+
+        <!-- Quick highlights -->
+        <div class="features">
+          <div class="card feature">
+            <div class="badge">Py</div>
+            <div>
+              <strong>Python, SQL</strong><br/>
+              Data structures, problem-solving, MySQL queries, APIs.
+            </div>
+          </div>
+
+          <div class="card feature">
+            <div class="badge">Web</div>
+            <div>
+              <strong>Django / Flask</strong><br/>
+              REST APIs, auth, CRUD, clean MVC structure.
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right (placeholder image / can replace later) -->
+      <aside class="card" aria-label="Profile preview">
+        <img src="images/profile.jpeg" alt="Mohamed Sameer Profile Photo" />
+             alt="Mohamed Sameer Profile"
+             style="width:100%;border-radius:12px;display:block;aspect-ratio:1/1;object-fit:cover;background:#0b1224;border:1px solid rgba(148,163,184,.12)"/>
+        <div style="margin-top:12px;color:#94a3b8;font-size:14px">
+          Replace this image with <code>images/your-photo.jpg</code>
+        </div>
+      </aside>  
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="y"></span> Mohamed Sameer • Built with HTML & CSS
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
